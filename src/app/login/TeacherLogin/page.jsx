@@ -1,12 +1,12 @@
 import Link from "next/link";
 import React from "react";
 
-const About = () => {
+const TeacherLogin = () => {
   return (
     <div>
-      <h1>About Page</h1>
+      This is Teacher Login Page
     </div>
   );
 };
 
-export default About;
+export default TeacherLogin;

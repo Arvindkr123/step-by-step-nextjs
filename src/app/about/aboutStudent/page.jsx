@@ -1,12 +1,12 @@
 import Link from "next/link";
 import React from "react";
 
-const About = () => {
+const StudentAbout = () => {
   return (
     <div>
-      <h1>About Page</h1>
+      Student About Page
     </div>
   );
 };
 
-export default About;
+export default StudentAbout;
