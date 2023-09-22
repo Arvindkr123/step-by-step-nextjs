@@ -1,9 +1,36 @@
-# Component Type in Next JS
+# Routing in Next js
 
-<ul>
-   <li>Types of Component in Next js</li>
-   <li>What is server Component</li>
-   <li>What is client Component</li>
-   <li>Where to use server Component</li>
-   <li>Where to use client Component</li>
-</ul>
+## Next js used the file based routing
+
+# diff between Link and Navigation
+
+# when going some page by clicking on events then we called that navigation
+
+# when we going some other by link then we called that linking
+
+```javascript
+"use client";
+import styles from "./page.module.css";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+
+export default function Home() {
+  const router = useRouter();
+  const navigate = (name) => {
+    router.push(name);
+  };
+  return (
+    <main>
+      <h1>Home Page</h1>
+      <Link href={"/login"}>go to login </Link>
+      <br />
+      <br />
+      <Link href={"/about"}>go to about </Link>
+      <br />
+      <br />
+      <button onClick={() => navigate("/login")}>Go to Login Page</button>
+      <button onClick={() => navigate("/about")}>Go to About Page</button>
+    </main>
+  );
+}
+```
