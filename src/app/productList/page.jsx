@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 async function productList() {
   const res = await fetch("https://dummyjson.com/products");
   const data = await res.json();
@@ -6,7 +8,7 @@ async function productList() {
 
 const Product = async () => {
   const data = await productList();
-  console.log("*******************************************************");
+  //console.log("*******************************************************");
   console.log(data);
   return (
     <div>
@@ -31,7 +33,7 @@ const Product = async () => {
                 border: "3px solid whitesmoke",
               }}
             >
-              <article style={{padding:'30px'}}>
+              <article style={{ padding: "30px" }}>
                 <header>
                   <h4>
                     {product.title}, $<strong>{product.price}</strong>
@@ -43,7 +45,10 @@ const Product = async () => {
                   />
                 </header>
                 <footer>
-                  <p>{product.description}</p>
+                  <p>{product.description.slice(0,33)}...</p>
+                  <Button price={product.discountPercentage}>
+                    Check discount Percentage
+                  </Button>
                 </footer>
               </article>
             </li>
