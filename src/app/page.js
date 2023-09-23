@@ -16,6 +16,9 @@ export default function Home() {
       <button className={styles.btn} onClick={() => navigate("/about")}>
         About
       </button>
+      <button className={styles.btn} onClick={() => navigate("/studentList")}>
+        Student List
+      </button>
     </main>
   );
 }
