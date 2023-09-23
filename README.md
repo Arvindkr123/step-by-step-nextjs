@@ -1,43 +1,21 @@
-# Conditional Layout
+# Catch all Segment
 
 ```javascript
 "use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import "./login.css";
+import React from "react";
 
-const layout = ({ children }) => {
-  const currentPath = usePathname();
-  //console.log(currentPath);
-  const arr = ["/login/StudentLogin", "/login/TeacherLogin"];
-  const isAnyMatch = arr.some((ele) => currentPath === ele);
-  //console.log(isAnyMatch);
-
+export default function Lecture({ params }) {
+  //console.log(params);
+  const { lecture } = params;
   return (
-    <div className="container">
-      {!isAnyMatch ? (
-        <ul className="loginMenu">
-          <li>
-            <h4>Login Navbar</h4>
-          </li>
-          <li>
-            <Link href={"/login"}>Login Main</Link>
-          </li>
-          <li>
-            <Link href={"/login/StudentLogin"}>Student Login</Link>
-          </li>
-          <li>
-            <Link href={"/login/TeacherLogin"}>Teacher Login</Link>
-          </li>
-        </ul>
-      ) : (
-        <Link href={"/login"}>back to login page</Link>
-      )}
-
-      {children}
+    <div>
+      lecture here of your collges
+      <ul>
+        {lecture.map((lec) => {
+          return <li>{lec}</li>;
+        })}
+      </ul>
     </div>
   );
-};
-
-export default layout;
+}
 ```
