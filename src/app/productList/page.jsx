@@ -1,63 +1,49 @@
-"use client";
+async function productList() {
+  const res = await fetch("https://dummyjson.com/products");
+  const data = await res.json();
+  return data.products;
+}
 
-import React, { useEffect, useState } from "react";
-
-function Product() {
-  const [item, setItem] = useState([]);
-  const fetchdata = async () => {
-    const res = await fetch("https://dummyjson.com/products");
-    const data = await res.json();
-    setItem(data.products);
-  };
-  useEffect(() => {
-    fetchdata();
-  }, []);
+const Product = async () => {
+  const data = await productList();
+  console.log("*******************************************************");
+  console.log(data);
   return (
     <div>
-      <h1>Product List</h1>
-
+      <h3>Server Side Component fetch data Call</h3>
       <ul
         style={{
           display: "flex",
+          flexWrap: "wrap",
           alignItems: "center",
           justifyContent: "center",
-          flexWrap: "wrap",
-          gap: "20px",
         }}
       >
-        {item.map((ele) => {
+        {data.map((product) => {
           return (
             <li
               style={{
                 listStyle: "none",
-                marginBottom: "20px",
-                cursor: "pointer",
+                width: "300px",
+                textAlign: "center",
+                padding: "20px",
+                margin: "50px",
+                border: "3px solid whitesmoke",
               }}
             >
-              <article
-                style={{
-                  maxWidth: "400px",
-                  textAlign: "center",
-                  boxShadow: "2px 2px 8px #000",
-                  padding: "10px 20px",
-                }}
-              >
+              <article style={{padding:'30px'}}>
                 <header>
-                  <p>{ele.title}</p>
-                  <p>
-                    $ <strong> {ele.price}</strong>
-                  </p>
-                </header>
-                <footer>
+                  <h4>
+                    {product.title}, $<strong>{product.price}</strong>
+                  </h4>
                   <img
-                    style={{
-                      width: "100%",
-                      objectPosition: "center",
-                      objectFit: "contain",
-                    }}
-                    src={ele.images[0]}
+                    style={{ width: "100%", objectFit: "contain" }}
+                    src={product.images[1]}
                     alt=""
                   />
+                </header>
+                <footer>
+                  <p>{product.description}</p>
                 </footer>
               </article>
             </li>
@@ -66,6 +52,6 @@ function Product() {
       </ul>
     </div>
   );
-}
+};
 
 export default Product;
