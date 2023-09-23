@@ -1,24 +1,11 @@
-"use client";
-import styles from "./page.module.css";
-import { useRouter } from "next/navigation";
+import React from "react";
 
-export default function Home() {
-  const router = useRouter();
-  const navigate = (name) => {
-    router.push(name);
-  };
+const Home = () => {
   return (
-    <main className={styles.main}>
-      <h3>Welcome to Home</h3>
-      <button className={styles.btn} onClick={() => navigate("/login")}>
-        Login
-      </button>
-      <button className={styles.btn} onClick={() => navigate("/about")}>
-        About
-      </button>
-      <button className={styles.btn} onClick={() => navigate("/studentList")}>
-        Student List
-      </button>
-    </main>
+    <div>
+      <h1>Welcome to Home</h1>
+    </div>
   );
-}
+};
+
+export default Home;
