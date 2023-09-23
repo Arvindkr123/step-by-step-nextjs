@@ -1,12 +1,9 @@
-import Link from "next/link";
-import React from "react";
-
 const Home = () => {
   return (
-    <div>
-      <h1>Welcome to Home</h1>
-      <Link href={"/productList"}>go to product</Link>
-    </div>
+    <main>
+      <h1>Genrate meta data in Next js</h1>
+      
+    </main>
   );
 };
 
