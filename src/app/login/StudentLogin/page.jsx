@@ -2,7 +2,7 @@ import React from "react";
 
 const StudentLogin = () => {
   return (
-    <div>
+    <div style={{ textAlign: "center" }}>
       This is Student Login Page
     </div>
   );
