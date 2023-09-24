@@ -1,6 +1,3 @@
-# SSG - Static Site Generation
-
-```javascript
 import { fetchUser } from "../../../../Service/getUser";
 
 export default async function page({ params }) {
@@ -34,4 +31,3 @@ export async function generateStaticParams() {
     userId: user.id.toString(),
   }));
 }
-```
