@@ -1,8 +1,7 @@
 const Home = () => {
   return (
     <main>
-      <h1>Genrate meta data in Next js</h1>
-      
+      <h1>Loader in Next JS</h1>
     </main>
   );
 };
