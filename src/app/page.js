@@ -1,7 +1,7 @@
 const Home = () => {
   return (
     <main>
-      <h1>Loader in Next JS</h1>
+      <h1>Export Static HTML Page in Next js</h1>
     </main>
   );
 };
