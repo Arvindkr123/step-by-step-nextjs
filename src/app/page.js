@@ -1,7 +1,7 @@
 const Home = () => {
   return (
     <main>
-      <h1>Static Site Genration (SSG) in Next js</h1>
+      <h1>Redirect in next js</h1>{" "}
     </main>
   );
 };
