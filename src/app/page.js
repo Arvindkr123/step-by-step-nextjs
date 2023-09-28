@@ -1,19 +1,30 @@
-import { API_BASE_URL } from "../Config/constants";
-const Home = () => {
-  console.log(process.env.SERVER_PASSWORD);
+import { getAllUsers } from "@/utils/feature";
+import Link from "next/link";
+
+export const metadata = {
+  title: "Users",
+  description: "Arvind K",
+};
+
+async function Home() {
+  const users = await getAllUsers();
+  // console.log(users);
   return (
     <main>
-      <h1>Enviornment Variables in Next Js</h1>
-      {process.env.NODE_ENV === "development" ? (
-        <h3>You are in development Mode</h3>
-      ) : (
-        <h3>You are in production Mode</h3>
-      )}
-
-      <p>**********************************************</p>
-      {API_BASE_URL}
+      <h4>Learning SSG and SSR in details</h4>
+      {users?.map((i) => {
+        return (
+          <>
+            <br />
+            <p key={i.id}>
+              <Link href={`/user/${i.id}`}>{i.name}</Link>
+            </p>
+            <br />
+          </>
+        );
+      })}
     </main>
   );
-};
+}
 
 export default Home;
