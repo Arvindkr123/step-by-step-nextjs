@@ -16,12 +16,7 @@ const Home = () => {
         <Button text={"see our works"} url={"/protfolio"}></Button>
       </div>
       <div className={styles.item}>
-        <Image
-          alt="hero image"
-          className={styles.img}
-          // src={"https://www.pexels.com/photo/paper-bag-18362146/"}
-          src={Hero}
-        />
+        <Image alt="hero image" className={styles.img} src={Hero} />
       </div>
     </div>
   );
