@@ -37,6 +37,4 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #111;
-  color: white;
 }
