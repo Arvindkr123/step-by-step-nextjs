@@ -9,7 +9,7 @@ const Blog = () => {
         <div className={styles.container}>
           <Image
             src={
-              "https://images.pexels.com/photos/18601910/pexels-photo-18601910/free-photo-of-glacier-in-mountains-in-black-and-white.jpeg?auto=com  press&cs=tinysrgb&w=600&lazy=load"
+              "https://images.pexels.com/photos/18510514/pexels-photo-18510514/free-photo-of-a-close-up-of-apples-on-a-tree.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
             }
             width={400}
             height={250}
@@ -33,7 +33,7 @@ const Blog = () => {
         <div className={styles.container}>
           <Image
             src={
-              "https://images.pexels.com/photos/18601910/pexels-photo-18601910/free-photo-of-glacier-in-mountains-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+              "https://images.pexels.com/photos/18510514/pexels-photo-18510514/free-photo-of-a-close-up-of-apples-on-a-tree.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
             }
             width={400}
             height={250}
@@ -57,7 +57,7 @@ const Blog = () => {
         <div className={styles.container}>
           <Image
             src={
-              "https://images.pexels.com/photos/18601910/pexels-photo-18601910/free-photo-of-glacier-in-mountains-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+              "https://images.pexels.com/photos/18510514/pexels-photo-18510514/free-photo-of-a-close-up-of-apples-on-a-tree.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
             }
             width={400}
             height={250}
@@ -81,7 +81,7 @@ const Blog = () => {
         <div className={styles.container}>
           <Image
             src={
-              "https://images.pexels.com/photos/18601910/pexels-photo-18601910/free-photo-of-glacier-in-mountains-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+              "https://images.pexels.com/photos/18510514/pexels-photo-18510514/free-photo-of-a-close-up-of-apples-on-a-tree.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
             }
             width={400}
             height={250}
@@ -105,7 +105,7 @@ const Blog = () => {
         <div className={styles.container}>
           <Image
             src={
-              "https://images.pexels.com/photos/18601910/pexels-photo-18601910/free-photo-of-glacier-in-mountains-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+              "https://images.pexels.com/photos/18510514/pexels-photo-18510514/free-photo-of-a-close-up-of-apples-on-a-tree.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
             }
             width={400}
             height={250}
@@ -129,7 +129,7 @@ const Blog = () => {
         <div className={styles.container}>
           <Image
             src={
-              "https://images.pexels.com/photos/18601910/pexels-photo-18601910/free-photo-of-glacier-in-mountains-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+              "https://images.pexels.com/photos/18510514/pexels-photo-18510514/free-photo-of-a-close-up-of-apples-on-a-tree.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
             }
             width={400}
             height={250}
@@ -153,7 +153,7 @@ const Blog = () => {
         <div className={styles.container}>
           <Image
             src={
-              "https://images.pexels.com/photos/18601910/pexels-photo-18601910/free-photo-of-glacier-in-mountains-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+              "https://images.pexels.com/photos/18510514/pexels-photo-18510514/free-photo-of-a-close-up-of-apples-on-a-tree.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
             }
             width={400}
             height={250}
@@ -177,7 +177,7 @@ const Blog = () => {
         <div className={styles.container}>
           <Image
             src={
-              "https://images.pexels.com/photos/18601910/pexels-photo-18601910/free-photo-of-glacier-in-mountains-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+              "https://images.pexels.com/photos/18510514/pexels-photo-18510514/free-photo-of-a-close-up-of-apples-on-a-tree.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
             }
             width={400}
             height={250}
@@ -201,7 +201,7 @@ const Blog = () => {
         <div className={styles.container}>
           <Image
             src={
-              "https://images.pexels.com/photos/18601910/pexels-photo-18601910/free-photo-of-glacier-in-mountains-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+              "https://images.pexels.com/photos/18510514/pexels-photo-18510514/free-photo-of-a-close-up-of-apples-on-a-tree.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
             }
             width={400}
             height={250}

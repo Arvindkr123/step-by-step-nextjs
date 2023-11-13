@@ -13,7 +13,7 @@ const Home = () => {
           Turning your Idea into Reality. We bring together the teams from the
           global tech industry.
         </p>
-        <Button text={"see our works"} url={"/protfolio"}></Button>
+        <Button text={"see our works"} url={"/portfolio"}></Button>
       </div>
       <div className={styles.item}>
         <Image alt="hero image" className={styles.img} src={Hero} />
