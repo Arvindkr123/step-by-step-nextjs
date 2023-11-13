@@ -2,225 +2,50 @@ import React from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
-const Blog = () => {
+
+async function getData() {
+  const res = await fetch(
+    "https://jsonplaceholder.typicode.com/posts",
+    // {next: { revalidate: 10 },}
+    { cache: "no-store" }
+  );
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+const Blog = async () => {
+  let data = await getData();
+  //console.log(data);
   return (
     <div className={styles.mainContainer}>
-      <Link href={"/blog/id"} className={styles.container}>
-        <div className={styles.container}>
-          <Image
-            src={
-              "https://images.pexels.com/photos/18510514/pexels-photo-18510514/free-photo-of-a-close-up-of-apples-on-a-tree.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-            }
-            width={400}
-            height={250}
-            className={styles.image}
-          />
-        </div>
-        <div className={styles.content}>
-          <h1 className={styles.title}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum
-            unde
-          </h1>
-          <p className={styles.description}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti
-            laudantium hic placeat nulla facilis id molestias nemo quas adipisci
-            vero quo, nisi perspiciatis. Aliquam blanditiis et necessitatibus
-            natus, iusto laborum.
-          </p>
-        </div>
-      </Link>
-      <Link href={"/blog/id"} className={styles.container}>
-        <div className={styles.container}>
-          <Image
-            src={
-              "https://images.pexels.com/photos/18510514/pexels-photo-18510514/free-photo-of-a-close-up-of-apples-on-a-tree.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-            }
-            width={400}
-            height={250}
-            className={styles.image}
-          />
-        </div>
-        <div className={styles.content}>
-          <h1 className={styles.title}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum
-            unde
-          </h1>
-          <p className={styles.description}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti
-            laudantium hic placeat nulla facilis id molestias nemo quas adipisci
-            vero quo, nisi perspiciatis. Aliquam blanditiis et necessitatibus
-            natus, iusto laborum.
-          </p>
-        </div>
-      </Link>
-      <Link href={"/blog/id"} className={styles.container}>
-        <div className={styles.container}>
-          <Image
-            src={
-              "https://images.pexels.com/photos/18510514/pexels-photo-18510514/free-photo-of-a-close-up-of-apples-on-a-tree.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-            }
-            width={400}
-            height={250}
-            className={styles.image}
-          />
-        </div>
-        <div className={styles.content}>
-          <h1 className={styles.title}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum
-            unde
-          </h1>
-          <p className={styles.description}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti
-            laudantium hic placeat nulla facilis id molestias nemo quas adipisci
-            vero quo, nisi perspiciatis. Aliquam blanditiis et necessitatibus
-            natus, iusto laborum.
-          </p>
-        </div>
-      </Link>
-      <Link href={"/blog/id"} className={styles.container}>
-        <div className={styles.container}>
-          <Image
-            src={
-              "https://images.pexels.com/photos/18510514/pexels-photo-18510514/free-photo-of-a-close-up-of-apples-on-a-tree.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-            }
-            width={400}
-            height={250}
-            className={styles.image}
-          />
-        </div>
-        <div className={styles.content}>
-          <h1 className={styles.title}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum
-            unde
-          </h1>
-          <p className={styles.description}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti
-            laudantium hic placeat nulla facilis id molestias nemo quas adipisci
-            vero quo, nisi perspiciatis. Aliquam blanditiis et necessitatibus
-            natus, iusto laborum.
-          </p>
-        </div>
-      </Link>
-      <Link href={"/blog/id"} className={styles.container}>
-        <div className={styles.container}>
-          <Image
-            src={
-              "https://images.pexels.com/photos/18510514/pexels-photo-18510514/free-photo-of-a-close-up-of-apples-on-a-tree.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-            }
-            width={400}
-            height={250}
-            className={styles.image}
-          />
-        </div>
-        <div className={styles.content}>
-          <h1 className={styles.title}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum
-            unde
-          </h1>
-          <p className={styles.description}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti
-            laudantium hic placeat nulla facilis id molestias nemo quas adipisci
-            vero quo, nisi perspiciatis. Aliquam blanditiis et necessitatibus
-            natus, iusto laborum.
-          </p>
-        </div>
-      </Link>
-      <Link href={"/blog/id"} className={styles.container}>
-        <div className={styles.container}>
-          <Image
-            src={
-              "https://images.pexels.com/photos/18510514/pexels-photo-18510514/free-photo-of-a-close-up-of-apples-on-a-tree.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-            }
-            width={400}
-            height={250}
-            className={styles.image}
-          />
-        </div>
-        <div className={styles.content}>
-          <h1 className={styles.title}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum
-            unde
-          </h1>
-          <p className={styles.description}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti
-            laudantium hic placeat nulla facilis id molestias nemo quas adipisci
-            vero quo, nisi perspiciatis. Aliquam blanditiis et necessitatibus
-            natus, iusto laborum.
-          </p>
-        </div>
-      </Link>
-      <Link href={"/blog/id"} className={styles.container}>
-        <div className={styles.container}>
-          <Image
-            src={
-              "https://images.pexels.com/photos/18510514/pexels-photo-18510514/free-photo-of-a-close-up-of-apples-on-a-tree.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-            }
-            width={400}
-            height={250}
-            className={styles.image}
-          />
-        </div>
-        <div className={styles.content}>
-          <h1 className={styles.title}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum
-            unde
-          </h1>
-          <p className={styles.description}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti
-            laudantium hic placeat nulla facilis id molestias nemo quas adipisci
-            vero quo, nisi perspiciatis. Aliquam blanditiis et necessitatibus
-            natus, iusto laborum.
-          </p>
-        </div>
-      </Link>
-      <Link href={"/blog/id"} className={styles.container}>
-        <div className={styles.container}>
-          <Image
-            src={
-              "https://images.pexels.com/photos/18510514/pexels-photo-18510514/free-photo-of-a-close-up-of-apples-on-a-tree.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-            }
-            width={400}
-            height={250}
-            className={styles.image}
-          />
-        </div>
-        <div className={styles.content}>
-          <h1 className={styles.title}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum
-            unde
-          </h1>
-          <p className={styles.description}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti
-            laudantium hic placeat nulla facilis id molestias nemo quas adipisci
-            vero quo, nisi perspiciatis. Aliquam blanditiis et necessitatibus
-            natus, iusto laborum.
-          </p>
-        </div>
-      </Link>
-      <Link href={"/blog/id"} className={styles.container}>
-        <div className={styles.container}>
-          <Image
-            src={
-              "https://images.pexels.com/photos/18510514/pexels-photo-18510514/free-photo-of-a-close-up-of-apples-on-a-tree.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-            }
-            width={400}
-            height={250}
-            className={styles.image}
-          />
-        </div>
-        <div className={styles.content}>
-          <h1 className={styles.title}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum
-            unde
-          </h1>
-          <p className={styles.description}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti
-            laudantium hic placeat nulla facilis id molestias nemo quas adipisci
-            vero quo, nisi perspiciatis. Aliquam blanditiis et necessitatibus
-            natus, iusto laborum.
-          </p>
-        </div>
-      </Link>
+      {data.map((item) => {
+        return (
+          <Link
+            key={item.id}
+            href={`/blog/${Number(item.id)}`}
+            className={styles.container}
+          >
+            <div className={styles.container}>
+              <Image
+                src={
+                  "https://images.pexels.com/photos/18510514/pexels-photo-18510514/free-photo-of-a-close-up-of-apples-on-a-tree.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                }
+                width={400}
+                height={250}
+                className={styles.image}
+              />
+            </div>
+            <div className={styles.content}>
+              <h1 className={styles.title}>{item.title}</h1>
+              <p className={styles.description}>{item.body}</p>
+            </div>
+          </Link>
+        );
+      })}
     </div>
   );
 };
